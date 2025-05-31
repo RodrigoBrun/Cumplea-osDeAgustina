@@ -23,10 +23,14 @@ body {
 }
 
 body.abierto {
-  background: url('imagenes/fondoCumpleAgus.png') no-repeat center center fixed;
-  background-size: contain;
-  background-color: var(--color-fondo); /* para rellenar si sobra espacio */
+  background: url('imagenes/fondoCumpleAgus.png') no-repeat top center fixed;
+  background-size: 100% 100%;
+  background-color: var(--color-fondo);
 }
+
+
+
+
 
 
 .overlay {
@@ -133,6 +137,7 @@ h1, h2 {
   margin-top: 1rem;
   color: var(--color-blanco);
   font-weight: bold;
+  font-family: 'Sniglet', cursive;
 }
 
 .texto-bienvenida {
@@ -222,6 +227,16 @@ h1, h2 {
 }
 
 /* ==== INFO CELEBRACIÓN ==== */
+
+.icono-celebracion {
+  width: 320px; /* o el tamaño que quieras */
+  height: auto; /* mantiene la proporción */
+  display: block;
+  margin-bottom: -60px;
+}
+
+
+
 .info-celebracion {
   display: flex;
   flex-direction: column;
@@ -238,7 +253,7 @@ h1, h2 {
   }
 
 .bloque-info {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 225, 234, 0.3);
   padding: 1.2rem 1.8rem;
   border-radius: 12px;
   max-width: 320px;
@@ -247,9 +262,6 @@ h1, h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.icono-celebracion {
-  width: 60px;
-}
 
 /* ==== BOTONES ==== */
 .boton-confirmar,
@@ -423,6 +435,18 @@ body.abierto .whatsapp-btn {
 .footer-invitacion a:hover {
   text-decoration: underline;
 }
+
+
+
+body.abierto *:not(h1):not(h2) {
+  font-family: 'Sniglet', cursive !important;
+  color: var(--color-secundario);
+}
+
+
+
+
+
 
 /* ==== RESPONSIVE ==== */
 @media (max-width: 600px) {
