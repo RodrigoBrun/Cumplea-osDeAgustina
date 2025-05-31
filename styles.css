@@ -1,0 +1,469 @@
+:root {
+  --color-principal: #ff8ab3;           /* Rosa chicle */
+  --color-secundario: #d94c66;          /* Rojo frutilla oscuro */
+  --color-detalle-claro: #ffe1ea;       /* Rosa pastel claro */
+  --color-fondo: #fff5f8;               /* Fondo crema rosado */
+  --color-texto-suave: #fbdde3;         /* Gris rosado claro */
+  --color-blanco: #ffffff;
+}
+
+/* ==== ESTILOS GENERALES ==== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('imagenes/fondoRosaSimbolos.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body.abierto {
+  background: url('imagenes/fondoCumpleAgus.png') no-repeat center center fixed;
+  background-size: contain;
+  background-color: var(--color-fondo); /* para rellenar si sobra espacio */
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+body.abierto .overlay {
+  opacity: 1;
+}
+
+/* ==== SOBRE ==== */
+.sobre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.sobre {
+  max-width: 300px;
+  width: 100%;
+  cursor: pointer;
+  animation: vibrar 2s infinite;
+  transition: opacity 0.8s ease;
+}
+
+@keyframes vibrar {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+body.abierto .sobre-container {
+  display: none;
+}
+
+/* ==== CONTENIDO GENERAL ==== */
+.contenido {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  z-index: 2;
+  padding-bottom: 4rem;
+}
+
+body.abierto .contenido {
+  display: block;
+}
+
+.carta {
+  max-width: 420px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 1s ease;
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.05));
+}
+
+body.abierto .carta {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ==== SECCIONES ==== */
+.seccion {
+  padding: 3rem 1.5rem;
+  max-width: 700px;
+  margin: auto;
+  color: var(--color-blanco);
+  text-align: center;
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+ font-family: 'Pacifico', cursive;
+  color: var(--color-texto-suave);
+  margin: 0;
+}
+
+.nombre {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: var(--color-blanco);
+  font-weight: bold;
+}
+
+.texto-bienvenida {
+  font-size: 1.2rem;
+}
+
+.destacado-cancion {
+  font-size: 1.5rem;
+  color: var(--color-principal);
+}
+
+/* ==== BOTÓN LATIDO ==== */
+.boton-latido {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 2rem;
+  animation: latido 1.5s infinite;
+  transition: background 0.3s ease;
+}
+
+.boton-latido:hover {
+  background-color: var(--color-secundario);
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.flechitas-abajo {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: var(--color-blanco);
+  animation: saltar 1s infinite;
+}
+
+@keyframes saltar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+/* ==== CONTADOR ==== */
+.contador-contenedor {
+  text-align: center;
+}
+
+.circulo-fondo {
+  position: relative;
+  display: inline-block;
+}
+
+.contador-circular {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.contador-circular div {
+  font-size: 1.1rem;
+  color: var(--color-blanco);
+}
+
+.contador-circular span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.disco-girando {
+  width: 250px;
+  animation: girar 20s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ==== INFO CELEBRACIÓN ==== */
+.info-celebracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+ .icono-formulario img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+
+.bloque-info {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1.2rem 1.8rem;
+  border-radius: 12px;
+  max-width: 320px;
+  color: var(--color-blanco);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.icono-celebracion {
+  width: 60px;
+}
+
+/* ==== BOTONES ==== */
+.boton-confirmar,
+.boton-direccion {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton-confirmar:hover,
+.boton-direccion:hover {
+  background-color: var(--color-secundario);
+}
+
+/* ==== MODAL ==== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-contenido {
+  background-color: var(--color-fondo);
+  border-radius: 25px;
+  padding: 40px 20px 30px 20px;
+  width: 90%;
+  max-width: 420px;
+  margin: 0 15px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--color-secundario);
+  color: var(--color-blanco);
+  font-size: 20px;
+  border: 2px solid var(--color-blanco);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.icono-formulario {
+  background-color: var(--color-fondo);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2px solid var(--color-principal);
+}
+
+.icono-formulario img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.modal input[type="text"] {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid var(--color-secundario);
+  background: transparent;
+}
+
+.boton-enviar {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* ==== EXTRA ==== */
+.info-extra {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  color: var(--color-blanco);
+}
+
+.descripcion-fiesta {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ==== WHATSAPP BUTTON ==== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-principal);
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+body.abierto .whatsapp-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==== FOOTER ==== */
+.footer-invitacion {
+  background-color: rgba(255, 249, 240, 0.8);
+  color: var(--color-secundario);
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 15px;
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer-invitacion a,
+.footer-link {
+  color: var(--color-principal);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-invitacion a:hover {
+  text-decoration: underline;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 600px) {
+  .carta, .sobre {
+    max-width: 90vw;
+  }
+
+  .contador-circular {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: -80px;
+  }
+
+  .disco-girando {
+    width: 200px;
+  }
+
+  .bloque-info {
+    width: 90%;
+  }
+
+  .modal-contenido {
+    width: 90%;
+  }
+
+  .boton-latido {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .nombre {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-btn {
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}

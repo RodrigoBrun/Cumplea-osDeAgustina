@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación Agustina</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <!-- SOBRE CERRADO -->
+  <div class="sobre-container" id="sobreContainer">
+    <img src="imagenes/SobreAgustina.png" alt="Sobre cerrado" class="sobre" id="sobre" />
+  </div>
+
+  <!-- CONTENIDO QUE SE ABRE -->
+  <div class="contenido" id="contenido">
+    <!-- Sección principal -->
+    <section id="bienvenida" class="seccion centrado">
+      <h1 style="font-family: 'Pacifico', cursive;">Agustina's Birthday</h1>
+      <p class="fecha">Martes 11 de junio</p><br />
+      <p class="texto-bienvenida">
+        Quiero que estés presente en un momento único...<br /><br /><br />
+        <strong class="destacado-cancion">¡Vamos a celebrar a lo grande!</strong>
+      </p>
+      <h2 class="nombre">Agustina Rojas</h2>
+      <button class="boton-latido" onclick="irASeccion('info')">Confirmar asistencia</button>
+      <div class="flechitas-abajo">↓</div>
+    </section>
+
+    <!-- Contador 
+    <section id="contador" class="seccion contador-contenedor">
+      <h2>Faltan...</h2><br /><br />
+      <div class="circulo-fondo">
+        <img src="imagenes/ICONO-DISCO-GASTADO.jpg" alt="Disco girando" class="disco-girando" />
+        <div class="contador-circular">
+          <div><span id="dias">00</span><small>Días</small></div>
+          <div><span id="horas">00</span><small>Horas</small></div>
+          <div><span id="minutos">00</span><small>Minutos</small></div>
+          <div><span id="segundos">00</span><small>Segundos</small></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Info del evento -->
+    <section id="info" class="seccion info-celebracion">
+      <img src="imagenes/ICONO-CELEBRACIO-VERDE.jpg" alt="Celebración" class="icono-celebracion" />
+
+      <div class="bloque-info">
+        <h3>Día</h3>
+        <p><strong>Martes</strong> 11 de junio - 20:00hs</p>
+      </div>
+
+      <div class="bloque-info">
+        <h3>Confirmar asistencia</h3>
+        <p>El Jardín De Casa Ideal - Bar de vinos (calle 68 Este)</p>
+        <a href="#" class="boton-confirmar" onclick="abrirModal(); return false;">Confirmar asistencia</a>
+      </div>
+
+      <div class="bloque-info">
+        <h3>Dirección</h3>
+        <p>Panamá City, Panamá</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=El+Jardín+De+Casa+Ideal,+Calle+68+Este,+Panamá+City" class="boton-direccion" target="_blank">¿Cómo llegar?</a>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modalConfirmacion" class="modal">
+      <div class="modal-contenido">
+        <button class="cerrar-modal" onclick="cerrarModal()">×</button>
+        <div class="icono-formulario">
+          <img src="imagenes/icono-musica-verde.jpg" alt="Celebración" />
+        </div>
+        <h2>¿Asistís al evento?</h2>
+        <form id="formAsistencia">
+          <div class="radio-group">
+            <label><input type="radio" name="asiste" value="sí" required> ¡Sí, confirmo!</label>
+            <label><input type="radio" name="asiste" value="no"> No puedo :(</label>
+          </div>
+          <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+          <input type="text" name="extra" placeholder="Dato extra. Ej: Soy vegetariano" />
+          <button type="submit" class="boton-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Extra info -->
+    <section class="seccion info-extra">
+      <h2>Celebración Especial</h2>
+      <p class="descripcion-fiesta">
+        Vamos a celebrar los 22 años de Agustina con una noche muy especial donde me encantaría que me acompañes 💫
+      </p>
+      <div class="tarjetas-contenedor"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-invitacion">
+      <div class="footer-texto">
+        <p>Con amor, <strong>Agustina 🎉</strong></p>
+        <small>&copy; 2025 - Sitio creado por
+          <a href="https://www.instagram.com/rodrigo_brun" target="_blank" class="footer-link">@Rodrigo Brun</a>
+        </small>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Audio -->
+  <audio id="magia">
+    <source src="imagenesYsonidos/polvo-de-adas.mp3" type="audio/mp3" />
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
