@@ -22,11 +22,18 @@ body {
   flex-direction: column;
 }
 
-body.abierto {
-  background: url('imagenes/fondoCumpleAgus.png') no-repeat center center fixed;
-  background-size: cover;
+body.abierto .contenido {
+  background: url('imagenes/fondoCumpleAgus.png') no-repeat top center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
   background-color: var(--color-fondo);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 
 
