@@ -23,11 +23,7 @@ body {
 }
 
 body.abierto .contenido {
-  background: url('imagenes/fondoCumpleAgus.png') no-repeat center center;
-  background-size: contain; /* 👈 Esto evita la deformación */
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-color: var(--color-fondo);
+  background: none; /* removemos el fondo acá */
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -35,6 +31,21 @@ body.abierto .contenido {
   align-items: center;
 }
 
+
+
+body.abierto::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('imagenes/fondoCumpleAgus.png') center center no-repeat;
+  background-size: cover;
+  background-color: var(--color-fondo); /* opcional para fondo suave */
+  z-index: -1;
+  pointer-events: none;
+}
 
 
 
@@ -54,7 +65,7 @@ body.abierto .contenido {
 }
 
 body.abierto .overlay {
-  opacity: 1;
+  opacity: 0.1;
 }
 
 /* ==== SOBRE ==== */
