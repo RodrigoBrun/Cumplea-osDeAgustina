@@ -134,16 +134,26 @@ body.abierto .carta {
   align-items: center;
 }
 
-h1, h2 {
- font-family: 'Pacifico', cursive;
+h1, h2, h3 {
+  font-family: 'Pacifico', cursive;
   color: var(--color-texto-suave);
   margin: 0;
+  text-shadow:
+    -1px -1px 0 #5c1a24,
+     1px -1px 0 #5c1a24,
+    -1px  1px 0 #5c1a24,
+     1px  1px 0 #5c1a24;
 }
 
+
+
+
+
+
 .nombre {
-  font-size: 2rem;
+  font-size: 10rem;
   margin-top: 1rem;
-  color: var(--color-blanco);
+  color: var(--color-detalle-claro);
   font-weight: bold;
   font-family: 'Sniglet', cursive;
 }
@@ -160,7 +170,7 @@ h1, h2 {
 /* ==== BOTÓN LATIDO ==== */
 .boton-latido {
   background-color: var(--color-principal);
-  color: var(--color-blanco);
+  color: var(--color-fondo);
   border: none;
   padding: 0.8rem 1.6rem;
   font-size: 1rem;
@@ -277,17 +287,19 @@ h1, h2 {
   display: inline-block;
   margin-top: 0.8rem;
   padding: 0.6rem 1.2rem;
-  background-color: var(--color-principal);
-  color: var(--color-blanco);
+  background-color: var(--color-detalle-claro);
+  color: var(--color-fondo); /* 👈 Esto cambia el color del texto */
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: background 0.3s ease;
 }
 
+
 .boton-confirmar:hover,
 .boton-direccion:hover {
   background-color: var(--color-secundario);
+   color: var(--color-fondo); /* 👈 Esto cambia el color del texto */
 }
 
 /* ==== MODAL ==== */
