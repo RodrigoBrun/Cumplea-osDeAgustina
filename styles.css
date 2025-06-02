@@ -229,13 +229,19 @@ h1.titulo-cumple:hover {
 
 
 .destacado-cancion {
-  font-size: 1.5rem;
-  color: var(--color-principal);
+ font-family: 'Homemade Apple', cursive;
+  font-size: 2rem;
+  color: #BC1B1B; /* Rojo intenso */
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
 }
 
 /* ==== BOTÓN LATIDO ==== */
 .boton-latido {
-  background-color: var(--color-principal);
+  background-color: #BC1B1B;
   color: var(--color-fondo) !important;
   border: 3px solid var(--color-secundario);
   padding: 1rem 2rem;
@@ -550,13 +556,24 @@ body.abierto .whatsapp-btn {
 
 
 
-body.abierto *:not(h1):not(h2) {
+body.abierto *:not(h1):not(h2):not(.destacado-cancion) {
   font-family: 'Sniglet', cursive !important;
   color: var(--color-secundario);
 }
 
 
 
+.info-celebracion {
+  background-color: rgba(255, 255, 255, 0.15); /* fondo blanco traslúcido */
+  backdrop-filter: blur(12px);                /* borrosidad estilo vidrio esmerilado */
+  -webkit-backdrop-filter: blur(12px);        /* soporte para Safari */
+  border-radius: 100px;                        /* bordes redondeados */
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);   /* sombra suave */
+  border: 1px solid rgba(255, 255, 255, 0.3);  /* borde sutil blanco */
+  max-width: 800px;
+  margin: 3rem auto;
+}
 
 
 
