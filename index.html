@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación Agustina</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Pacifico&display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
 
 </head>
+
 <body>
   <div class="overlay"></div>
 
@@ -21,14 +26,15 @@
   <div class="contenido" id="contenido">
     <!-- Sección principal -->
     <section id="bienvenida" class="seccion centrado">
-      <h1 style="font-family: 'Pacifico', cursive;">Agustina's Birthday</h1>
+      <h1 class="titulo-cumple">Agustina's Birthday</h1>
       <p class="fecha">Martes 11 de junio</p><br />
       <p class="texto-bienvenida">
         Este no es un cumpleaños cualquiera...<br />
-  ¡Cumplo 22! Y quiero celebrarlo con vos 💖<br /><br />
-  Una noche llena de detalles, música, brindis y gente linda…<br /><br /><br /><br />
+        ¡Cumplo 22! Y quiero celebrarlo con vos <span class="corazon-estilizado">♥</span><br /><br />
+        Una noche llena de detalles, música, brindis y gente linda…<br /><br /><br /><br />
         <strong class="destacado-cancion">¡Te espero!</strong>
       </p>
+
       <h2 class="nombre">Agustina Rojas</h2>
       <button class="boton-latido" onclick="irASeccion('info')">Confirmar asistencia✨</button>
 
@@ -50,36 +56,37 @@
     </section> -->
 
     <!-- Info del evento -->
-<section id="info" class="seccion info-celebracion">
-  <img src="imagenes/CelebracionAgus4.png" alt="Celebración" class="icono-celebracion" />
+    <section id="info" class="seccion info-celebracion">
+      <img src="imagenes/CelebracionAgus4.png" alt="Celebración" class="icono-celebracion" />
 
-  <div class="bloque-info">
-    <h3>Día</h3>
-    <p><strong>Martes</strong> 11 de junio - 20:00hs</p>
-  </div>
+      <div class="bloque-info">
+        <h3>Día</h3>
+        <p><strong>Martes</strong> 11 de junio - 20:00hs</p>
+      </div>
 
-  <div class="bloque-info">
-    <h3>Confirmar asistencia</h3>
-    <p>¡Haceme saber si venís! 💌</p>
-    <a href="#" class="boton-confirmar" onclick="abrirModal(); return false;">Confirmar asistencia 🌷</a>
-  </div>
+      <div class="bloque-info">
+        <h3>Confirmar asistencia</h3>
+        <p>¡Haceme saber si venís! 💌</p>
+        <a href="#" class="boton-confirmar" onclick="abrirModal(); return false;">Confirmar asistencia 🌷</a>
+      </div>
 
-  <div class="bloque-info">
-    <h3>Lugar</h3>
-    <p>Pastissima El Origen</p>
-    <h3>Dirección</h3>
-    <p>Calle 72, C. 72 Este, Panamá City</p>
-    <a href="https://maps.app.goo.gl/czjbimoL9WtpCiKb7?g_st=com.google.maps.preview.copy" class="boton-direccion" target="_blank">¿Cómo llegar? 📍</a>
-  </div>
-</section>
+      <div class="bloque-info">
+        <h3>Lugar</h3>
+        <p>Pastissima El Origen</p>
+        <h3>Dirección</h3>
+        <p>Calle 72, C. 72 Este, Panamá City</p>
+        <a href="https://maps.app.goo.gl/czjbimoL9WtpCiKb7?g_st=com.google.maps.preview.copy" class="boton-direccion"
+          target="_blank">¿Cómo llegar? 📍</a>
+      </div>
+    </section>
 
 
     <!-- Modal -->
     <div id="modalConfirmacion" class="modal">
       <div class="modal-contenido">
         <button class="cerrar-modal" onclick="cerrarModal()">
-  <img src="imagenes/IconoXModal.png" alt="Cerrar" />
-</button>
+          <img src="imagenes/IconoXModal.png" alt="Cerrar" />
+        </button>
 
         <div class="icono-formulario">
           <img src="imagenes/IconoCorazon.png" alt="Celebración" />
@@ -101,7 +108,8 @@
     <section class="seccion info-extra">
       <h2>Celebración Especial</h2>
       <p class="descripcion-fiesta">
-       Este año cumplo 22 y quiero celebrarlo de una forma especial, rodeada de las personas que más quiero. Va a ser una noche llena de magia, música y detalles pensados con mucho amor… y me encantaría que estés ahí conmigo 💕
+        Este año cumplo 22 y quiero celebrarlo de una forma especial, rodeada de las personas que más quiero. Va a ser
+        una noche llena de magia, música y detalles pensados con mucho amor… y me encantaría que estés ahí conmigo 💕
       </p>
       <div class="tarjetas-contenedor"></div>
     </section>
@@ -125,4 +133,5 @@
 
   <script src="scripts.js"></script>
 </body>
+
 </html>
