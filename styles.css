@@ -23,9 +23,10 @@ body {
 }
 
 body.abierto .contenido {
-  background: url('imagenes/fondoCumpleAgus.png') no-repeat top center;
-  background-size: 100% 100%;
-  background-attachment: fixed;
+  background: url('imagenes/fondoCumpleAgus.png') no-repeat center center;
+  background-size: contain; /* 👈 Esto evita la deformación */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   background-color: var(--color-fondo);
   width: 100%;
   min-height: 100vh;
@@ -33,6 +34,7 @@ body.abierto .contenido {
   flex-direction: column;
   align-items: center;
 }
+
 
 
 
@@ -409,6 +411,22 @@ h1, h2, h3 {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
+
+
+.descripcion-fiesta {
+  background-color: rgba(255, 225, 234, 0.3);
+  padding: 1.2rem 1.8rem;
+  border-radius: 12px;
+  max-width: 320px;
+  color: var(--color-blanco);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 0 auto; /* centrado */
+}
+
+
+
+
 
 /* ==== WHATSAPP BUTTON ==== */
 .whatsapp-btn {
