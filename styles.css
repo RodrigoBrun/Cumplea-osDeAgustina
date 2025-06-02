@@ -528,4 +528,11 @@ body.abierto *:not(h1):not(h2) {
     font-size: 0.8rem;
     padding: 0.6rem 1rem;
   }
+
+  body.abierto .contenido {
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
 }
