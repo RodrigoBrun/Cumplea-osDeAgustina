@@ -175,6 +175,14 @@ h1.titulo-cumple:hover {
 }
 
 
+.fecha {
+  font-size: 1.1rem;
+  color: #BC1B1B !important; /* O cualquier otro color que prefieras */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
 
 
 
@@ -188,7 +196,37 @@ h1.titulo-cumple:hover {
 
 .texto-bienvenida {
   font-size: 1.2rem;
+  color: #BC1B1B !important;
 }
+
+
+
+.corazon-estilizado {
+  color: #BC1B1B; /* Rojo fuerte */
+  font-size: 1.8rem;
+  text-shadow: 0 0 5px rgba(188, 27, 27, 0.5);
+  display: inline-block;
+  animation: latido 1.2s infinite;
+  transform-origin: center;
+}
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+
+
 
 .destacado-cancion {
   font-size: 1.5rem;
