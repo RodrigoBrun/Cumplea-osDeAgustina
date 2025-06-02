@@ -148,8 +148,9 @@ body.abierto .carta {
 }
 
 h1, h2, h3 {
-  font-family: 'Pacifico', cursive;
-  color: var(--color-texto-suave);
+  /*font-family: 'Pacifico', cursive;*/
+    font-family: 'Homemade Apple', cursive;
+  color: var(--color-principal);
   margin: 0;
   text-shadow:
     -1px -1px 0 #5c1a24,
@@ -323,10 +324,11 @@ h1.titulo-cumple:hover {
 /* ==== INFO CELEBRACIÓN ==== */
 
 .icono-celebracion {
-  width: 320px; /* o el tamaño que quieras */
+  width: 400px; /* o el tamaño que quieras */
   height: auto; /* mantiene la proporción */
   display: block;
-  margin-bottom: -60px;
+  margin-bottom: -160px;
+  margin-top: -100px;
 }
 
 
@@ -347,7 +349,7 @@ h1.titulo-cumple:hover {
   }
 
 .bloque-info {
-  background-color: rgba(243, 148, 148, 0.25); /* tono pastel rosado con transparencia */
+  background-color: rgba(255, 247, 239, 0.288); /* tono pastel rosado con transparencia */
   padding: 1.2rem 1.8rem;
   border-radius: 100px;
   max-width: 320px;
@@ -355,6 +357,8 @@ h1.titulo-cumple:hover {
   backdrop-filter: blur(6px);
   box-shadow: 0 0 12px rgba(188, 27, 27, 0.2); /* sombra con tono rojo suave */
   border: 5px solid rgba(224, 9, 9, 0.384); /* borde rojo sólido */
+  backdrop-filter: blur(5px);                /* borrosidad estilo vidrio esmerilado */
+  -webkit-backdrop-filter: blur(12px);
 }
 
 
@@ -393,7 +397,7 @@ h1.titulo-cumple:hover {
 }
 
 .modal-contenido {
-  background-color: var(--color-fondo);
+  background-color: rgba(255, 247, 239, 1);
   border-radius: 25px;
   padding: 40px 20px 30px 20px;
   width: 90%;
@@ -474,7 +478,7 @@ h1.titulo-cumple:hover {
 
 .boton-enviar {
   background-color: var(--color-principal);
-  color: white;
+  color: var(--color-detalle-claro)!important;
   padding: 12px 24px;
   border: none;
   border-radius: 30px;
@@ -570,7 +574,7 @@ body.abierto *:not(h1):not(h2):not(.destacado-cancion) {
 
 .info-celebracion {
   background-color: rgba(255, 255, 255, 0.01); /* fondo blanco traslúcido */
-  backdrop-filter: blur(12px);                /* borrosidad estilo vidrio esmerilado */
+  backdrop-filter: blur(2px);                /* borrosidad estilo vidrio esmerilado */
   -webkit-backdrop-filter: blur(12px);        /* soporte para Safari */
   border-radius: 100px;                        /* bordes redondeados */
   padding: 2rem;
