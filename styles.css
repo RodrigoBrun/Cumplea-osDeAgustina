@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: url('imagenes/fondoRosaSimbolos.png') no-repeat center center fixed;
+  background: url('imagenes/fondoCumpleAgus.png') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', sans-serif;
   transition: background 1s ease;
