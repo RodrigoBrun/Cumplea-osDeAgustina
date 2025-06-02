@@ -160,25 +160,20 @@ h1, h2, h3 {
 
 
 h1.titulo-cumple {
-   font-family: 'Homemade Apple', cursive;
-  font-size: 2rem; /* Tamaño grande para destacar */
-  color: var(--color-, #e63990); /* Usa una variable si tenés o un rosa fuerte */
+  font-family: 'Homemade Apple', cursive;
+  font-size: 3rem;
+  color: #BC1B1B; /* Rojo intenso */
   text-align: center;
   margin-top: 6rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Sombra suave para dar relieve */
   letter-spacing: 1px;
   transition: transform 0.3s ease;
-  text-shadow:
-    -1px -1px 0 #5c1a24,
-     1px -1px 0 #5c1a24,
-    -1px  1px 0 #5c1a24,
-     1px  1px 0 #5c1a24;
 }
 
 h1.titulo-cumple:hover {
-  transform: scale(1.05); /* Animación sutil al pasar el mouse */
+  transform: scale(1.05);
 }
+
 
 
 
