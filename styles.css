@@ -45,6 +45,7 @@ body.abierto::before {
   background-color: var(--color-fondo); /* opcional para fondo suave */
   z-index: -1;
   pointer-events: none;
+  
 }
 
 
@@ -152,11 +153,11 @@ h2, h3 {
     font-family: 'Homemade Apple', cursive;
   color: var(--color-principal);
   margin: 0;
-  text-shadow:
+  /*text-shadow:
     -1px -1px 0 #5c1a24,
      1px -1px 0 #5c1a24,
     -1px  1px 0 #5c1a24,
-     1px  1px 0 #5c1a24;
+     1px  1px 0 #5c1a24;*/
 }
 
 
