@@ -147,7 +147,7 @@ body.abierto .carta {
   align-items: center;
 }
 
-h1, h2, h3 {
+h2, h3 {
   /*font-family: 'Pacifico', cursive;*/
     font-family: 'Homemade Apple', cursive;
   color: var(--color-principal);
