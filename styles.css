@@ -1,10 +1,10 @@
 :root {
-  --color-principal: #ff8ab3;           /* Rosa chicle */
-  --color-secundario: #d94c66;          /* Rojo frutilla oscuro */
-  --color-detalle-claro: #ffe1ea;       /* Rosa pastel claro */
-  --color-fondo: #fff5f8;               /* Fondo crema rosado */
-  --color-texto-suave: #fbdde3;         /* Gris rosado claro */
-  --color-blanco: #ffffff;
+  --color-principal: #BC1B1B;         /* Rojo base principal */
+  --color-secundario: #E03E3E;        /* Rojo más brillante para botones o detalles */
+  --color-detalle-claro: #F9D5D5;     /* Rosa claro pastel derivado del rojo */
+  --color-fondo: #FFF3F3;             /* Fondo suave, apenas rosado */
+  --color-texto-suave: #F2BABA;       /* Rosa viejo / rosado claro para textos suaves */
+  --color-blanco: #ffffff;            /* Blanco puro */
 }
 
 /* ==== ESTILOS GENERALES ==== */
@@ -187,8 +187,8 @@ h1.titulo-cumple:hover {
 
 
 .nombre {
-  font-size: 5rem;
-  margin-top: 1rem;
+  font-size: 1rem;
+  margin-top: -2rem;
   color: var(--color-detalle-claro);
   font-weight: bold;
   font-family: 'Sniglet', cursive;
@@ -197,6 +197,7 @@ h1.titulo-cumple:hover {
 .texto-bienvenida {
   font-size: 1.2rem;
   color: #BC1B1B !important;
+ 
 }
 
 
@@ -251,6 +252,7 @@ h1.titulo-cumple:hover {
   margin-top: 2rem;
   animation: latido 1.5s infinite;
   transition: background 0.3s ease, border 0.3s ease;
+    font-weight: bold;
 }
 
 
@@ -267,7 +269,7 @@ h1.titulo-cumple:hover {
 .flechitas-abajo {
   margin-top: 1.5rem;
   font-size: 6rem;
-  color: var(--color-blanco);
+  color: #BC1B1B !important;
   animation: saltar 1s infinite;
 }
 
@@ -345,14 +347,16 @@ h1.titulo-cumple:hover {
   }
 
 .bloque-info {
-  background-color: rgba(255, 225, 234, 0.3);
+  background-color: rgba(243, 148, 148, 0.25); /* tono pastel rosado con transparencia */
   padding: 1.2rem 1.8rem;
-  border-radius: 12px;
+  border-radius: 100px;
   max-width: 320px;
-  color: var(--color-blanco);
+  color: #BC1B1B !important; /* texto suave pero legible, oscuro derivado del rojo */
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 12px rgba(188, 27, 27, 0.2); /* sombra con tono rojo suave */
+  border: 5px solid rgba(224, 9, 9, 0.384); /* borde rojo sólido */
 }
+
 
 
 /* ==== BOTONES ==== */
@@ -361,12 +365,13 @@ h1.titulo-cumple:hover {
   display: inline-block;
   margin-top: 0.8rem;
   padding: 0.6rem 1.2rem;
-  background-color: var(--color-detalle-claro);
-  color: var(--color-fondo); /* 👈 Esto cambia el color del texto */
+  background-color: var(--color-principal);
+  color: var(--color-detalle-claro)!important; /* 👈 Esto cambia el color del texto */
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 100px;
   font-weight: bold;
   transition: background 0.3s ease;
+  border: 3px solid var(--color-secundario);
 }
 
 
@@ -564,7 +569,7 @@ body.abierto *:not(h1):not(h2):not(.destacado-cancion) {
 
 
 .info-celebracion {
-  background-color: rgba(255, 255, 255, 0.15); /* fondo blanco traslúcido */
+  background-color: rgba(255, 255, 255, 0.01); /* fondo blanco traslúcido */
   backdrop-filter: blur(12px);                /* borrosidad estilo vidrio esmerilado */
   -webkit-backdrop-filter: blur(12px);        /* soporte para Safari */
   border-radius: 100px;                        /* bordes redondeados */
