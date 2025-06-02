@@ -1,4 +1,3 @@
-// === ABRIR EL SOBRE Y MOSTRAR LA CARTA ===
 document.addEventListener('DOMContentLoaded', () => {
   const sobre = document.getElementById('sobre');
   const audio = document.getElementById('magia');
@@ -10,13 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   iniciarContador();
   configurarModalConfirmacion();
+  configurarEnvioFormulario(); // <-- nueva función para manejar el submit
 });
-
-// === FUNCIONES ===
 
 // ⏳ Contador circular hacia el evento
 function iniciarContador() {
-  const fechaEvento = new Date("May 23, 2025 19:30:00").getTime();
+  const fechaEvento = new Date("June 11, 2025 20:00:00").getTime();
 
   const spanDias = document.getElementById("dias");
   const spanHoras = document.getElementById("horas");
@@ -77,5 +75,38 @@ function configurarModalConfirmacion() {
     if (e.target === modal) {
       modal.style.display = "none";
     }
+  });
+}
+
+// 💌 Envío automático del formulario a WhatsApp
+function configurarEnvioFormulario() {
+  const form = document.getElementById('formAsistencia');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const asiste = form.elements['asiste'].value;
+    const nombre = form.elements['nombre'].value.trim();
+    const extra = form.elements['extra'].value.trim();
+
+    let mensaje = `Hola Agus! Soy ${nombre} y `;
+
+if (asiste === "sí") {
+  mensaje += `confirmo mi asistencia al cumple. 🎉✨`;
+} else {
+  mensaje += `no voy a poder asistir. 😢`;
+}
+
+if (extra !== "") {
+  mensaje += `\n\nExtra: ${extra}`;
+}
+
+
+    const url = `https://wa.me/50763509477?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+
+    document.getElementById("modalConfirmacion").style.display = "none";
+    form.reset();
   });
 }
