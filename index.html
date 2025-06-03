@@ -27,7 +27,7 @@
     <!-- Sección principal -->
     <section id="bienvenida" class="seccion centrado">
       <h1 class="titulo-cumple">Agustina's Birthday</h1>
-      <p class="fecha">Martes 11 de junio</p><br />
+      <p class="fecha">Miércoles 11 de junio</p><br />
       <p class="texto-bienvenida">
         Este no es un cumpleaños cualquiera...<br />
         ¡Cumplo 23! Y quiero celebrarlo con vos <span class="corazon-estilizado">♥</span><br /><br />
@@ -82,27 +82,34 @@
 
 
     <!-- Modal -->
-    <div id="modalConfirmacion" class="modal">
-      <div class="modal-contenido">
-        <button class="cerrar-modal" onclick="cerrarModal()">
-          <img src="imagenes/IconoXModal.png" alt="Cerrar" />
-        </button>
+<div id="modalConfirmacion" class="modal">
+  <div class="modal-contenido">
+    <button class="cerrar-modal" onclick="cerrarModal()">
+      <img src="imagenes/IconoXModal.png" alt="Cerrar" />
+    </button>
 
-        <div class="icono-formulario">
-          <img src="imagenes/IconoCorazon.png" alt="Celebración" />
-        </div>
-        <h2>¿Asistís al evento?</h2>
-        <form id="formAsistencia">
-          <div class="radio-group">
-            <label><input type="radio" name="asiste" value="sí" required> ¡Sí, confirmo!</label>
-            <label><input type="radio" name="asiste" value="no"> No puedo :(</label>
-          </div>
-          <input type="text" name="nombre" placeholder="Tu nombre completo" required />
-          <input type="text" name="extra" placeholder="Dato extra. Ej: Soy vegetariano" />
-          <button type="submit" class="boton-enviar">Enviar</button>
-        </form>
-      </div>
+    <div class="icono-formulario">
+      <img src="imagenes/IconoCorazon.png" alt="Celebración" />
     </div>
+    <h2>¿Asistís al evento?</h2>
+
+    <form id="formAsistencia">
+      <div class="radio-group">
+        <label><input type="radio" name="asiste" value="sí" required> ¡Sí, confirmo!</label>
+        <label><input type="radio" name="asiste" value="no"> No puedo :(</label>
+      </div>
+      <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+      <!-- <input type="text" name="extra" placeholder="Dato extra. Ej: Soy vegetariano" />-->
+
+      <button type="submit" class="boton-enviar">Enviar</button>
+
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: #BC1B1B; text-align: center;">
+        ¡ La consumición es por cuenta de cada uno. !
+      </p>
+    </form>
+  </div>
+</div>
+
 
     <!-- Extra info 
     <section class="seccion info-extra">
