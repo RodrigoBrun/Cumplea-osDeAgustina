@@ -40,7 +40,7 @@ body.abierto::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('imagenes/fondoCumpleAgus.png') center center no-repeat;
+  background: url('imagenes/AgusCumple7.png.jpg') center center no-repeat;
   background-size: cover;
   background-color: var(--color-fondo); /* opcional para fondo suave */
   z-index: -1;
