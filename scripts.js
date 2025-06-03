@@ -88,20 +88,22 @@ function configurarEnvioFormulario() {
 
     const asiste = form.elements['asiste'].value;
     const nombre = form.elements['nombre'].value.trim();
-    const extra = form.elements['extra'].value.trim();
+
+    // ⚠️ Verificamos si el campo extra existe antes de usarlo
+    const extraInput = form.elements['extra'];
+    const extra = extraInput ? extraInput.value.trim() : "";
 
     let mensaje = `Hola Agus! Soy ${nombre} y `;
 
-if (asiste === "sí") {
-  mensaje += `confirmo mi asistencia al cumple. 🎉✨`;
-} else {
-  mensaje += `no voy a poder asistir. 😢`;
-}
+    if (asiste === "sí") {
+      mensaje += `confirmo mi asistencia al cumple. 🎉✨`;
+    } else {
+      mensaje += `no voy a poder asistir. 😢`;
+    }
 
-if (extra !== "") {
-  mensaje += `\n\nExtra: ${extra}`;
-}
-
+    if (extra !== "") {
+      mensaje += `\n\nExtra: ${extra}`;
+    }
 
     const url = `https://wa.me/50763509477?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
